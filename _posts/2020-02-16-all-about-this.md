@@ -9,13 +9,16 @@ This is always a confusing part in Javascript. MDN documentation says "In most c
 ```
 var myObject = {
 	name: "Bruce Wayne",
-  getName: function () {
-    return this.name;
-  }
+  	getName: function () {
+    	return this.name;
+  	}
 };
-
+```
+```
 myObject.getName(); //Bruce Wayne
 ```
+
+
 2. Object within Objewct
 ```
 var parentObject = {
