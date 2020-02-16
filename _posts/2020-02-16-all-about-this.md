@@ -56,7 +56,7 @@ var myObject = {
 };
 myObject.getName(); // "Global Name";
 ```
-**Explisit binding**
+**Explicit binding**
 
 ```
 var name = "Global Name";
@@ -69,7 +69,7 @@ var myObject = {
 
 myObject.getName.call({name: "New Name}); // New Name
 ```
-Explicist binding took precedence over invoking context
+Explicit binding took precedence over invoking context
 
 **Explicit Binding with Arrow Function**
 ```
@@ -95,10 +95,19 @@ When arrow function is used for a method instead of regular function that is bin
 
 It means that the method is on every instance of the class instead of the constructor's prototype. It might cause some issues in testing with mock data. 
 
+**static method of class**
+
+Static methods do not belong to any perticular instance but for the class itself. So this in static method points to the class itself.
+
+```
+Class MyClass {
+  static myStaticMethod() {
+    console.log(this === Class);
+  }
+}
+MyClass.myStaticMethod(); // true
+```
+
 > Ref: 
 https://medium.com/@charpeni/arrow-functions-in-class-properties-might-not-be-as-great-as-we-think-3b3551c440b1
 https://dev.to/taesup/all-about-this-in-javascript-30j
-
-
-
-
