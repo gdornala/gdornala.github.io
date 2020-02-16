@@ -45,7 +45,7 @@ getName(); // "Global Name"
 ```
 
 
-4. The arrow function
+4. The fat arrow function
 
 ```
 var name = "Global Name";
@@ -55,5 +55,21 @@ var myObject = {
     	return this.name;
   	}
 };
-myObject.getName();
+myObject.getName(); // "Global Name";
 ```
+5. Explisit binding
+
+```
+var name = "Global Name";
+var myObject = {
+	name: "Bruce Wayne",
+	getName: function {
+    return this.name;
+  }
+};
+
+myObject.getName.call({name: "New Name}); // New Name
+```
+
+
+
