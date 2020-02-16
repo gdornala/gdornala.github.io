@@ -44,7 +44,7 @@ var {getName} = myObject;
 getName(); // "Global Name"
 ```
 
-4. The fat arrow function
+4.The fat arrow function
 
 ```
 var name = "Global Name";
@@ -58,6 +58,8 @@ myObject.getName(); // "Global Name";
 ```
 5. Explisit binding
 
+
+
 ```
 var name = "Global Name";
 var myObject = {
@@ -70,6 +72,7 @@ var myObject = {
 myObject.getName.call({name: "New Name}); // New Name
 ```
 Explicist binding took precedence over invoking context
+
 6. Explisit Binding with Arrow Function
 ```
 var name = "Global Name";
@@ -82,6 +85,7 @@ var myObject = {
 myObject.getName.call({name: "New Name"}); // "Global Name"
 ```
 Here arrow function took precedence over explisit binding.
+
 7. 
 
 
