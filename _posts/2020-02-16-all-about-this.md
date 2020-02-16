@@ -71,7 +71,7 @@ myObject.getName.call({name: "New Name}); // New Name
 ```
 Explicist binding took precedence over invoking context
 
-**Explisit Binding with Arrow Function**
+**Explicit Binding with Arrow Function**
 ```
 var name = "Global Name";
 var myObject = {
@@ -84,6 +84,20 @@ myObject.getName.call({name: "New Name"}); // "Global Name"
 ```
 Here arrow function took precedence over explisit binding.
 
+**React class method without explicit binding
+
+
+In React we know that we have to bind the class method in its constrctor. What if we do not bind? React ensures that the method sets undefined rather than global name.
+
+**React with arrow function method**
+
+When arrow function is used for a method instead of regular function that is binded in constructor, React defines the method on it's constructor instead of it's prototype function. What exactly it means?
+
+It means that the method is on every instance of the class instead of the constructor's prototype. It might cause some issues in testing with mock data. 
+
+> Ref: 
+https://medium.com/@charpeni/arrow-functions-in-class-properties-might-not-be-as-great-as-we-think-3b3551c440b1
+https://dev.to/taesup/all-about-this-in-javascript-30j
 
 
 
