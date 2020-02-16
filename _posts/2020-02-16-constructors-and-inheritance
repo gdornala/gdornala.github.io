@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 ---
 **Basic Constructor**
 ```
@@ -32,7 +32,7 @@ var newUser = new User();
 ```
 Now the objects of User share the methods.
 
-**Inheritance with constructor prototype**
+**Inheritance with constructor prototype (pseudo classical inheritance)**
 ```
 var AdminUser = function(name, age) {
 	this.name = name;
@@ -45,4 +45,6 @@ We have changed AdminUser's prototype with new User(). It makes all the methods 
 The problems with this approach are:
 1. There is no private data
 2. If someone forgets to put new before constructor, it would overwrite global properties.
+
+**Prototypal Inheritance**
 
