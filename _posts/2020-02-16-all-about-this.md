@@ -44,7 +44,9 @@ var {getName} = myObject;
 getName(); // "Global Name"
 ```
 
+
 4. The arrow function
+
 ```
 var name = "Global Name";
 var myObject = {
