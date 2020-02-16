@@ -13,13 +13,13 @@ const myArray = ["a", "b", "c"];
 
 if I implement filter like 
 
-```myArray.filter = (element, index) = {
+``myArray.filter = (element, index) = {
 	if(element === "a") {
     	return false;
     }
   return true;
 };
-```
+``
 
 this function would return a new array like this ["b", "c"];
 
@@ -27,17 +27,17 @@ this function would return a new array like this ["b", "c"];
 
 Add a method myFilter on Array's prototype. It should take a callback function as argument and return new array;
 
-```
+``
 Array.prototype.myFilter = function (callback) {
   const newArray = [];
   return newArray;
 }
-```
+``
     
 ## Step 2
 The callback functionn should be triggered for each and every element of the array with element, index and array as arguments;
 
-```
+``
 Array.prototype.myFilter = function (callback) {
 	const newArray = [];
   for (let index = 0; index < this.length; index++) {
@@ -45,13 +45,13 @@ Array.prototype.myFilter = function (callback) {
   }
   return newArray;
 }
-```
+``
     
 ## Step 3
 
 Our method should return array with elements for those the callback function returns true.
 
-```
+``
 Array.prototype.myFilter = function (callback) {
 	const newArray = [];
   for (let index = 0; index < this.length; index++) {
@@ -60,6 +60,6 @@ Array.prototype.myFilter = function (callback) {
     }
   return newArray;
 };
-```
+``
         
  Thats it. Now our own filter is ready.
