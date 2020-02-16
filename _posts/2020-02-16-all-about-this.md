@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 ---
 ## All About This
 
@@ -61,4 +61,3 @@ var myObject = {
 
 myObject.getName();
 ```
-
