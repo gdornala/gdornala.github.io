@@ -1,0 +1,17 @@
+---
+published: false
+---
+**Basic Constructor**
+```
+var User = function(name, age) {
+	this.name = name,
+    this.age = age;
+    var getName = function() {
+    	return this.name;
+    }
+}
+var newUser = new User();
+```
+This pattern contains two problems:
+1. It is hard to have inheritance
+2. The code of methods is shared across all the user Objects.
