@@ -9,7 +9,7 @@ A front-end developer from Hyderabad.
 
 ### More Information
 
-This blog is a plaxceholder for noting down my learnings in front-end development. There are many books, blog posts and other places from which I might have learned these things. 
+This blog is a plaxceholder for noting down my learnings in front-end development. I might have collected these from many other blogs, books, webpages etc. 
 
 ### Contact me
 
