@@ -3,7 +3,7 @@ published: true
 ---
 This is always a confusing part in Javascript. MDN documentation says "In most cases, the value of this is determined by how a function is called (runtime binding)". That means this is not determined by where the function is written but how it is invoked.
 
-1. The most basic case:
+**The most basic case:**
 ```
 var myObject = {
 	name: "Bruce Wayne",
@@ -15,7 +15,7 @@ myObject.getName(); //Bruce Wayne
 ```
 
 
-2. Object within Object
+**Object within Object**
 ```
 var parentObject = {
 	name: "Bruce Wayne",
@@ -30,7 +30,7 @@ parentObject.getName(); // "Bruce Wayne"
 parentObject.childObject.getName(); //"Joker"
 ```
 
-3. Destructured method
+**Destructured method**
 
 ```
 var name = "Global Name";
@@ -44,7 +44,7 @@ var {getName} = myObject;
 getName(); // "Global Name"
 ```
 
-4.The fat arrow function
+**The fat arrow function**
 
 ```
 var name = "Global Name";
@@ -56,9 +56,7 @@ var myObject = {
 };
 myObject.getName(); // "Global Name";
 ```
-5. Explisit binding
-
-
+**Explisit binding**
 
 ```
 var name = "Global Name";
@@ -73,7 +71,7 @@ myObject.getName.call({name: "New Name}); // New Name
 ```
 Explicist binding took precedence over invoking context
 
-6. Explisit Binding with Arrow Function
+**Explisit Binding with Arrow Function**
 ```
 var name = "Global Name";
 var myObject = {
@@ -86,7 +84,7 @@ myObject.getName.call({name: "New Name"}); // "Global Name"
 ```
 Here arrow function took precedence over explisit binding.
 
-7. 
+
 
 
 
