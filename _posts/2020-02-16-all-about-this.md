@@ -84,7 +84,18 @@ myObject.getName.call({name: "New Name"}); // "Global Name"
 ```
 Here arrow function took precedence over explisit binding.
 
-**React class method without explicit binding
+**this in constructor invoked with new**
+```
+function User(name, age) {
+  this.name = name,
+  this.age = age,
+};
+var myUser = new User();
+```
+
+When a constructor is invoked with "new" operator, it creates a new object. Usually the constructor modifies the object and the function returns "this" (which is the newly formed object).
+
+**React class method without explicit binding**
 
 
 In React we know that we have to bind the class method in its constrctor. What if we do not bind? React ensures that the method sets undefined rather than global name.
