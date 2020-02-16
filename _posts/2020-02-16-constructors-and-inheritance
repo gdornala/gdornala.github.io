@@ -15,3 +15,23 @@ var newUser = new User();
 This pattern contains two problems:
 1. It is hard to have inheritance
 2. The code of methods is shared across all the user Objects.
+
+**Constructor Prototype**
+If we move method getName out of the constructor onto prototype, then the code of getName is shared across all its objects.
+
+```
+var User = function(name, age) {
+	this.name = name,
+    this.age = age;
+};
+
+User.prototype.getName = function() {
+	return this.name;
+    }
+var newUser = new User();
+```
+Now the objects of User share the methods.
+
+**Inheritance with constructor prototype**
+
+
