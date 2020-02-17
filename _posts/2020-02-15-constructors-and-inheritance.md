@@ -22,12 +22,12 @@ If we move method getName out of the constructor onto prototype, then the code o
 ```
 var User = function(name, age) {
 	this.name = name,
-    this.age = age;
+	this.age = age;
 };
 
 User.prototype.getName = function() {
 	return this.name;
-    }
+}
 var newUser = new User();
 ```
 Now the objects of User share the methods.
@@ -47,3 +47,16 @@ The problems with this approach are:
 2. If someone forgets to put new before constructor, it would overwrite global properties.
 
 **Prototypal Inheritance**
+
+In prototypal inheritance objects are created from a model object or prototype. It is different from classical inheritance in which there is no class, objects are created just from another object.
+
+```
+var carProto = {
+ steering: 1,
+ wheels: 4
+ };
+var myCar = Object.create(carProto)
+```
+In myCar can get new properties defined as second argument to Object.create().
+
+
