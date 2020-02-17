@@ -108,7 +108,7 @@ It means that the method is on every instance of the class instead of the constr
 
 **static method of class**
 
-Static methods do not belong to any perticular instance but for the class itself. So this in static method points to the class itself.
+Static methods do not belong to any specific instance but for the class itself. So this in static method points to the class itself.
 
 ```
 Class MyClass {
