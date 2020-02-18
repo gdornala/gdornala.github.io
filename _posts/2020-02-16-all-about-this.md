@@ -1,15 +1,15 @@
 ---
 published: true
 ---
-This is always a confusing part in Javascript. MDN documentation says "In most cases, the value of this is determined by how a function is called (runtime binding)". That means this is not determined by where the function is written but how it is invoked.
+"this" is always a confusing part in Javascript. MDN documentation says "In most cases, the value of this is determined by how a function is called (runtime binding)". That means "this" is not determined by where the function is written but how it is invoked.
 
 **The most basic case:**
 ```
 var myObject = {
-	name: "Bruce Wayne",
-  	getName: function () {
-    	return this.name;
-  	}
+  name: "Bruce Wayne",
+  getName: function () {
+    return this.name;
+  }
 };
 myObject.getName(); //Bruce Wayne
 ```
@@ -18,13 +18,13 @@ myObject.getName(); //Bruce Wayne
 **Object within Object**
 ```
 var parentObject = {
-	name: "Bruce Wayne",
-    childObject: {
-    	name: "Joker",
-    	getName: function () {
-     		return this.name;
-    	}
-  	}
+  name: "Bruce Wayne",
+  childObject: {
+    name: "Joker",
+    getName: function () {
+      return this.name;
+    }
+  }
 };
 parentObject.getName(); // "Bruce Wayne"
 parentObject.childObject.getName(); //"Joker"
