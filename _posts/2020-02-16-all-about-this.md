@@ -35,10 +35,10 @@ parentObject.childObject.getName(); //"Joker"
 ```
 var name = "Global Name";
 var myObject = {
-	name: "Bruce Wayne",
-  	getName: function () {
-    	return this.name;
-    }
+  name: "Bruce Wayne",
+  getName: function () {
+    return this.name;
+  }
 };
 var {getName} = myObject;
 getName(); // "Global Name"
@@ -49,10 +49,10 @@ getName(); // "Global Name"
 ```
 var name = "Global Name";
 var myObject = {
-	name: "Bruce Wayne",
-	getName: () => {
-    	return this.name;
-  	}
+  name: "Bruce Wayne",
+  getName: () => {
+    return this.name;
+  }
 };
 myObject.getName(); // "Global Name";
 ```
@@ -61,8 +61,8 @@ myObject.getName(); // "Global Name";
 ```
 var name = "Global Name";
 var myObject = {
-	name: "Bruce Wayne",
-	getName: function {
+  name: "Bruce Wayne",
+  getName: function {
     return this.name;
   }
 };
@@ -75,8 +75,8 @@ Explicit binding took precedence over invoking context
 ```
 var name = "Global Name";
 var myObject = {
-	name: "Bruce Wayne",
-	getName: () => {
+  name: "Bruce Wayne",
+  getName: () => {
     return this.name;
   }
 };
