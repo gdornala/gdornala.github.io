@@ -17,7 +17,7 @@ and if I use filter like the following code,
 
 ```
 myArray.filter((element, index) => {
-	if (element === "a") {
+  if (element === "a") {
     return false;
   }
   return true;
@@ -47,12 +47,12 @@ The callback function should be triggered for each and every element of the arra
 
 ```
 Array.prototype.myFilter = function (callback) {
-	const newArray = [];
-    for (let index = 0; index < this.length; index++) {
-      callback(this[index], index, this);
-      //logic to filter
+  const newArray = [];
+  for (let index = 0; index < this.length; index++) {
+    callback(this[index], index, this);
+     //logic to filter
     }
-    return newArray;
+  return newArray;
 }
 ```
     
@@ -67,9 +67,9 @@ Array.prototype.myFilter = function (callback) {
     if (callback(this[index], index, this)) {
       newArray.push(this[index]);
     }
-    }
+  }
   return newArray;
 };
 ```
         
- Thats it. Now our own filter is ready.
+ That's it. Now our own filter is ready.
